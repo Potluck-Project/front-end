@@ -24,30 +24,30 @@
 .logLgd {
     font-size: 1rem;
 }
-.logLabel {
+label {
     display: inline;
     font-size: 1rem;
     padding: 0 .5rem;
 }
-.input{
+input{
     display: inline;
     border: 1px solid #999999;
     border-radius: 3px;
     margin-bottom: 1rem;
     font-size: 1rem;
 }
-.fieldset {
+fieldset {
     border-radius: 5px;
     padding: 1rem;
 }
-.button {
+button {
     margin: auto 15%;
-    width: 10rem;
+    width: 7rem;
     height: 3rem;
-    background-color: #105e1b;
+    background-color: #1cb831;
     border: 1px solid #999999;
     border-radius: 10px;
-    color: white;
+    color: rgb(241, 244, 246);
     :hover{
         background-color: #C4F2D0;
         color: black;

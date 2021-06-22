@@ -28,7 +28,7 @@ const Login = props => {
             <form className ="logForm"onSubmit = {logUser}>
                 <fieldset>
                     <h2 className ="logLgd">Login</h2>
-                    <label className ="logLabel" htmlFor='username' />User Name
+                    <label htmlFor='username' />User Name
                     <input
                         placeholder="Username"
                         id='username'
