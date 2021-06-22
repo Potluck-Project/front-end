@@ -12,15 +12,12 @@ const events = [
 
 const EventList = () => {
   return (
-    <div>
-      <div className='list_img'></div>
-      <section className='list_container'>
-        <div className='list'>
-          {events.map((event, key) => {
-            return <EventListItem key={key} event={event} />;
-          })}
-        </div>
-      </section>
+    <div className='list_container'>
+      <div className='list'>
+        {events.map((event, key) => {
+          return <EventListItem key={key} event={event} />;
+        })}
+      </div>
     </div>
   )
 }

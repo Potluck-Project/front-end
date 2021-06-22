@@ -3,8 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-/*  
-    background-image:url(${img}); */
+    background-image:url('../Images/1.jpeg');
     border: 2px solid red;
     height: 100%; 
     width: 100%;
