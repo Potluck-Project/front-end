@@ -8,24 +8,15 @@ import Footer from './components/Footer';
 import EventList from './components/EventList';
 
 function App() {
-  return (
-    <div className="App">
-     
-      
-      <Route path= "/">
-            <Navigation/>
-      </Route>
-  
-      <Route path= "/">
-            <Login />
-      </Route>
-      
-      <Route path= "/">
-            <Footer/>
-      </Route>
-      
-    </div>
-  );
+      return (
+            <div className="App">
+                  <Navigation/>
+                  <Route path= "/">
+                        <Login />
+                  </Route>
+                  <Footer/>
+            </div>
+      );
 }
 
 export default App;

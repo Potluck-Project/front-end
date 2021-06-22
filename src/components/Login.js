@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import img from './Images/1.jpeg'
+import img from '../assets/Images/1.jpeg';
 
 const LogBase = styled.div`
     display: flex;
@@ -10,8 +10,8 @@ const LogBase = styled.div`
  
     background-image:url(${img});
     border: 2px solid red;
-    height: 800px; 
-    width: 1500px;
+    height: 100%; 
+    width: 100%;
     background-size: cover;
     
 `;
