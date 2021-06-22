@@ -16,11 +16,11 @@ function App() {
                         <Route path='/event-list/'>
                               <EventList />
                         </Route>
-                        <Route path= "/">
-                              <Login />
-                        </Route>
                         <Route path= '/signup'>
                               <SignUp />
+                        </Route>
+                        <Route path= "/">
+                              <Login />
                         </Route>
 
                   </Switch>
