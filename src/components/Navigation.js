@@ -7,7 +7,7 @@ import '../assets/css/Navigation.css';
 
 function Navigation() {
     return (
-        <div className= "wraper">
+        <div className= "wrapper">
            <div className="image-wrapper">
                 <img 
                 className="home-image"
