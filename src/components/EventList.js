@@ -1,4 +1,4 @@
-import '../assets/css/EventList.css';
+import '../assets/css/Event.css';
 import React from 'react';
 
 import EventListItem from './EventListItem';
@@ -12,8 +12,8 @@ const events = [
 
 const EventList = () => {
   return (
-    <div className='list_container'>
-      <div className='list'>
+    <div className='container'>
+      <div className='inner_div'>
         {events.map((event, key) => {
           return <EventListItem key={key} event={event} />;
         })}

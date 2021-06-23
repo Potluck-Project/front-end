@@ -1,0 +1,45 @@
+
+.container {
+  width: 100%;
+  height: 80vh;
+  background-image: url('../Images/dan-gold-4_jhDO54BYg-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner_div {
+ width: 60%;
+ background-color: white;
+ height:fit-content;
+}
+
+/* Event Page */
+.event_wrapper {
+  width: 70%;
+  background-color: white;
+  height:fit-content;
+ }
+ 
+.event_details {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3%;
+}
+.div_details {
+  width: 23%;
+  background-color: #dddcb4;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.div_list {
+  width: 23%;
+  background-color: #dddcb4;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.div_buttons {
+  width: 15%;
+}

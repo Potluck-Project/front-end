@@ -5,8 +5,8 @@ import Navigation from './components/Navigation'
 import Login from './components/Login';
 import Footer from './components/Footer';
 import SignUp from './components/SignUp';
-
 import EventList from './components/EventList';
+import EventPage from './components/EventPage';
 
 function App() {
       return (
@@ -16,13 +16,15 @@ function App() {
                         <Route path='/event-list/'>
                               <EventList />
                         </Route>
-                        <Route path= '/signup'>
+                        <Route path= '/signup/'>
                               <SignUp />
+                        </Route>
+                        <Route path= '/event/id'>
+                              <EventPage />
                         </Route>
                         <Route path= "/">
                               <Login />
                         </Route>
-
                   </Switch>
                   <Footer/>
             </div>
