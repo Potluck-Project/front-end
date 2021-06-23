@@ -13,7 +13,7 @@ const events = [
 const EventList = () => {
   return (
     <div className='container'>
-      <div className='inner_div'>
+      <div className='list_div'>
         {events.map((event, key) => {
           return <EventListItem key={key} event={event} />;
         })}
