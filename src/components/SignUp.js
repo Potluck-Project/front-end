@@ -29,7 +29,7 @@ const SignUp = props => {
             <form className ="logForm"onSubmit = {logUser}>
                 <fieldset>
                     <h2 className ="logLgd">Create a Free Account</h2>
-                    <label htmlFor='username' />User Name
+                    <label htmlFor='username' />User Name: 
                     <input
                         placeholder="Username"
                         id='username'
@@ -37,7 +37,7 @@ const SignUp = props => {
                         value={login.username}
                         onChange={updateLogin}
                     />
-                    <label htmlFor='password' />Password
+                    <label htmlFor='password' />Password: 
                     <input
                         type="password"
                         id='password'
@@ -46,7 +46,7 @@ const SignUp = props => {
                         value={login.password}
                         onChange = {updateLogin}
                     />
-                     <label htmlFor='email' />Email
+                    <label htmlFor='email' />Email: 
                     <input
                         type="email"
                         id='email'

@@ -7,7 +7,7 @@ import '../assets/css/Navigation.css';
 
 function Navigation() {
     return (
-        <div className= "wraper">
+        <div className= "wrapper">
            <div className="image-wrapper">
                 <img 
                 className="home-image"
@@ -16,11 +16,11 @@ function Navigation() {
                 />
            </div>
            <div className="link-wrapper">
-                <NavLink to="/logout"> Logout</NavLink>
-
                 <NavLink to="/event-list"> Event List</NavLink>
 
                 <NavLink to="/event"> Create Event</NavLink>
+
+                <NavLink to="/logout"> Logout</NavLink>
             </div>
         </div>
 

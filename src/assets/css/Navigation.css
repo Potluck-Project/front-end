@@ -1,11 +1,11 @@
-.wraper{
+.wrapper{
     background-color: #dddcb4;
     display: flex;
     padding: 5px;
     width: 100%;
-    margin: 4px;
-    justify-content: space-between;
-    align-items: flex-start;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 img {
@@ -15,19 +15,28 @@ img {
 }
 
 .image-wrapper{
+    width: 60%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 0;
 }
 
 .link-wrapper {
     display: flex;
+    width: 35%;
     justify-content: space-between;
 }
 
 .link-wrapper a {
-    padding:20px ;
+    padding: 2% 5%;
     align-content: center;
     font-size: 1.1rem;
-    
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    text-decoration: none;
+}
+.link-wrapper a:hover {
+    background-color: darkslategrey;
+    color: lightgrey;
 }
