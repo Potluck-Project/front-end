@@ -4,8 +4,9 @@ import axios from 'axios';
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 
-const Login = props => {
-    const [login, setLogin] = useState({username:"", password:""});
+
+const SignUp = props => {
+    const [login, setLogin] = useState({username:"", password:"", email:""});
 
     const updateLogin = e => {
         setLogin({ ...login, [e.target.name]: e.target.value});
@@ -27,7 +28,7 @@ const Login = props => {
         <div className="logBase">
             <form className ="logForm"onSubmit = {logUser}>
                 <fieldset>
-                    <h2 className ="logLgd">Login</h2>
+                    <h2 className ="logLgd">Create a Free Account</h2>
                     <label htmlFor='username' />User Name
                     <input
                         placeholder="Username"
@@ -45,10 +46,17 @@ const Login = props => {
                         value={login.password}
                         onChange = {updateLogin}
                     />
-                    <button>Login</button>
-                    <h2>Don't have a account?</h2>
-                    <NavLink to="/signup"> Sign Up</NavLink>
-
+                     <label htmlFor='email' />Email
+                    <input
+                        type="email"
+                        id='email'
+                        placeholder="Email"
+                        name="email"
+                        value={login.email}
+                        onChange = {updateLogin}
+                    />
+                    <button>Create Account</button>
+                    
                 </fieldset>
             </form>
         </div>
@@ -56,4 +64,4 @@ const Login = props => {
     )
 }
 
-export default Login;
+export default SignUp;
