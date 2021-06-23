@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import SignUp from './components/SignUp';
 import EventList from './components/EventList';
 import EventPage from './components/EventPage';
+import AddEventForm from './components/AddEventForm';
+import EditEventForm from './components/EditEventForm';
 
 function App() {
       return (
@@ -21,6 +23,12 @@ function App() {
                         </Route>
                         <Route path= '/event/id'>
                               <EventPage />
+                        </Route>
+                        <Route path= '/event'>
+                              <AddEventForm />
+                        </Route>
+                        <Route path= '/edit-event'>
+                              <EditEventForm />
                         </Route>
                         <Route path= "/">
                               <Login />
