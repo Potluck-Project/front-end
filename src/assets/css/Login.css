@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     background-image:url('../Images/1.jpeg');
-    border: 2px solid red;
     height: 100%; 
     width: 100%;
     background-size: cover;
@@ -47,8 +46,10 @@ button {
     border: 1px solid #999999;
     border-radius: 10px;
     color: rgb(241, 244, 246);
-    :hover{
-        background-color: #C4F2D0;
-        color: black;
-    }
+    
 }
+
+button:hover {
+    background-color: #C4F2D0;
+    color: black;
+ }
