@@ -100,14 +100,14 @@ const EditEventForm = (e) => {
                         onChange={changeHandler}
                     />
                     <label htmlFor="organizer" />Organizer
-                    <input
+                    {/* <input
                         id="organizer"
                         type="number"
                         name="organizer"
                         placeholder="organizer"
                         value={editEventForm.organizer}
                         onChange={changeHandler}
-                    />
+                    /> */}
                     <button type='submit'>Submit changes</button>
                 </form>
             </div>
