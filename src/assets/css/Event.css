@@ -29,19 +29,32 @@
   padding: 3%;
 }
 .div_details {
-  width: 23%;
+  width: 20%;
   background-color: #dddcb4;
   border: 1px solid grey;
   border-radius: 5px;
 }
-.div_list {
-  width: 23%;
+.div_attendees {
+  width: 20%;
+  background-color: #dddcb4;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.div_items {
+  width: 35%;
   background-color: #dddcb4;
   border: 1px solid grey;
   border-radius: 5px;
 }
 .div_buttons {
   width: 15%;
+}
+.delete-button {
+  background-color: red;
+  color: black;
+}
+.delete-button:hover {
+  background-color: palevioletred;
 }
 
 /* Event List Item */
