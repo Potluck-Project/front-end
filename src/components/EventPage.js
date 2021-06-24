@@ -52,7 +52,7 @@ const EventPage = (props) => {
           }
           </div>
           <div className='div_buttons'>
-          <button>Edit Event</button>
+          <button >Edit Event</button>
           &nbsp;
           <button>Delete Event</button>
           </div>
