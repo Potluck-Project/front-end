@@ -1,19 +1,25 @@
 import '../assets/css/Event.css';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axiosWithAuth from '../utils/axiosWithAuth';
 
 import EventListItem from './EventListItem';
 
-const events = [
-  {name: 'Event 1', details: 'Here are some details about event 1.'},
-  {name: 'Event 2', details: 'Here are some details about event 2.'}, 
-  {name: 'Event 3', details: 'Here are some details about event 3.'}, 
-  {name: 'Event 4', details: 'Here are some details about event 4.'}
-]
-
 const EventList = () => {
+  const [ events, setEvents ] = useState([]);
+
+  useEffect(() => {
+    axiosWithAuth()
+      .get('api/event')
+      .then(res => {
+        setEvents(res.data)
+      })
+      .catch(err => {
+        console.log('err: ', err);
+      })
+  }, [])
   return (
     <div className='container'>
-      <div className='list_div'>
+      <div className='event_list_div'>
         {events.map((event, key) => {
           return <EventListItem key={key} event={event} />;
         })}

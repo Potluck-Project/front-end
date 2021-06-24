@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import '../assets/css/Login.css'
 import axios from 'axios';
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 
 
-const SignUp = props => {
-    const [login, setLogin] = useState({username:"", password:"", email:""});
+const SignUp = () => {
+    const property = {username: "", password:"", email:""};
+    const [login, setLogin] = useState(property);
 
     const updateLogin = e => {
         setLogin({ ...login, [e.target.name]: e.target.value});
@@ -14,13 +14,14 @@ const SignUp = props => {
 
     const logUser = e => {
         e.preventDefault();
-        axios.post( login)
+        axios
+            .post('https://potluck-app-api.herokuapp.com/api/auth/register', login)
             .then(res => {
-
-                localStorage.setItem('token', res.data.token);
-                props.history.push('/')
+                window.location.pathname = '/';
             })
-            .catch(err => console.log(err.response));
+            .catch(err => {
+                console.log('err: ', err);
+            });
     }
 
     return (

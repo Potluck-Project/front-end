@@ -1,11 +1,11 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import '../assets/css/Navigation.css';
 
-
-
-
 function Navigation() {
+    const logout = () => {
+        localStorage.removeItem('token');
+    }
     return (
         <div className= "wrapper">
            <div className="image-wrapper">
@@ -20,7 +20,7 @@ function Navigation() {
 
                 <NavLink to="/edit-event/"> Create Event</NavLink>
 
-                <NavLink to="/logout"> Logout</NavLink>
+                <NavLink to="/logout" onClick={logout}> Logout</NavLink>
             </div>
         </div>
 

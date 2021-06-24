@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-.list_div {
+.event_list_div {
  width: 60%;
  background-color: white;
  height:fit-content;
@@ -42,4 +42,16 @@
 }
 .div_buttons {
   width: 15%;
+}
+
+/* Event List Item */
+.event_list_item {
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin: 5% 2%;
+}
+
+.event_list_item:hover {
+  background-color: black;
+  color: white;
 }
