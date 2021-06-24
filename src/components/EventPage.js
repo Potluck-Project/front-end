@@ -15,6 +15,7 @@ const EventPage = (props) => {
     axiosWithAuth()
       .get(`api/event/${id}`)
       .then(res => {
+        console.log(res.data);
         setEvent(res.data);
         setAttendees(res.data.attendees);
         setItems(res.data.items);
@@ -22,7 +23,6 @@ const EventPage = (props) => {
       .catch(err => {
         console.log('err: ', err);
       })
-
   }, [])
 
   const toEdit = () => {
@@ -33,7 +33,7 @@ const EventPage = (props) => {
     axiosWithAuth()
       .delete(`api/event/${id}`)
       .then(res => {
-        console.log('res: ', res);
+        window.location.pathname = `event-list/`;
       })
       .catch(err => {
         console.log('err: ', err);
@@ -51,8 +51,8 @@ const EventPage = (props) => {
           <div className='div_attendees'>
           <h2>Attendees:</h2>
           {
-            attendees.map((person, idx) => {
-              return <h3 key={idx}>{person}</h3>
+            attendees.map(person => {
+              return <h3 key={person.attendees_id}>{person.username}</h3>
             })
           }
           </div>
