@@ -99,7 +99,7 @@ const EditEventForm = (e) => {
                         value={editEventForm.street}
                         onChange={changeHandler}
                     />
-                    <label htmlFor="organizer" />Organizer
+                    {/* <label htmlFor="organizer" />Organizer */}
                     {/* <input
                         id="organizer"
                         type="number"
