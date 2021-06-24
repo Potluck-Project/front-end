@@ -18,7 +18,7 @@ function Navigation() {
            <div className="link-wrapper">
                 <NavLink to="/event-list"> Event List</NavLink>
 
-                <NavLink to="/event"> Create Event</NavLink>
+                <NavLink to="/edit-event/"> Create Event</NavLink>
 
                 <NavLink to="/logout"> Logout</NavLink>
             </div>
