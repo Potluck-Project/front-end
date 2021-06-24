@@ -24,7 +24,7 @@ function App() {
                         <Route path='/event/:id'>
                               <EventPage />
                         </Route>
-                        <Route path='/event'>
+                        <Route path='/add-event/'>
                               <AddEventForm />
                         </Route>
                         <Route path='/edit-event'>
