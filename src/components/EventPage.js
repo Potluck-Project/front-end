@@ -22,7 +22,7 @@ const EventPage = (props) => {
       })
       .catch(err => {
         console.log('err: ', err);
-      })
+      }) // eslint-disable-next-line
   }, [])
 
   const toEdit = () => {
