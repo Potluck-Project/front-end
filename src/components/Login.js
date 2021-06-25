@@ -17,12 +17,10 @@ const Login = () => {
         axios
             .post('https://potluck-app-api.herokuapp.com/api/auth/login', login)
             .then(res => {
-                console.log('res: ', res);
                 localStorage.setItem('token', res.data.token);
                 window.location.pathname = 'event-list/';
             })
             .catch(err => {
-                console.log('err: ', err);
             });
     }
 

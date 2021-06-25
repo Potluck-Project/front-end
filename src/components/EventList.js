@@ -11,6 +11,7 @@ const EventList = () => {
     axiosWithAuth()
       .get('api/event')
       .then(res => {
+        console.log(res.data);
         setEvents(res.data)
       })
       .catch(err => {

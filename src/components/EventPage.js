@@ -1,6 +1,6 @@
 import '../assets/css/Event.css';
 import React, { useState, useEffect } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import axiosWithAuth from '../utils/axiosWithAuth';
 

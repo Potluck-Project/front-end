@@ -10,7 +10,7 @@ const initialValues = {
     event_state: '',
     event_street_address: '',
     event_zip: '',
-    event_organizer: '2'
+    event_organizer: 1
 }
 
 const AddEventForm = () => {
@@ -19,20 +19,17 @@ const AddEventForm = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log(newEvent);
         axiosWithAuth()
-            .post('api/event/', newEvent)
+            .post('/api/event/', newEvent)
             .then(res => {
                 window.location.pathname = `event/${res.data.event_id}`;
             })
             .catch(err => {
                 console.log('err: ', err.response)
             })
-     
-       
     }
+
     const changeHandler= (e) => {
-        // e.preventDefault()
         setNewEvent({...newEvent, [e.target.name]: e.target.value})
     }
 
