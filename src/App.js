@@ -18,19 +18,19 @@ function App() {
                         <Route path='/event-list/'>
                               <EventList />
                         </Route>
-                        <Route path= '/signup/'>
+                        <Route path='/signup/'>
                               <SignUp />
                         </Route>
-                        <Route path= '/event/id'>
+                        <Route path='/event/:id'>
                               <EventPage />
                         </Route>
-                        <Route path= '/event'>
+                        <Route path='/add-event/'>
                               <AddEventForm />
                         </Route>
-                        <Route path= '/edit-event'>
+                        <Route path='/edit-event/:id'>
                               <EditEventForm />
                         </Route>
-                        <Route path= "/">
+                        <Route path="/">
                               <Login />
                         </Route>
                   </Switch>

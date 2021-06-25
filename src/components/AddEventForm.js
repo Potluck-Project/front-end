@@ -1,31 +1,36 @@
-import React, { useEffect, useState } from 'react'
-import '../assets/css/AddEvent.css'
+import React, { useState } from 'react'
+import '../assets/css/AddEvent.css';
+import axiosWithAuth from '../utils/axiosWithAuth';
 
+const initialValues = {
+    event_name: '',
+    event_date: '', 
+    event_time: '',
+    event_city: '',
+    event_state: '',
+    event_street_address: '',
+    event_zip: '',
+    event_organizer: 1
+}
 
+const AddEventForm = () => {
 
+    const [newEvent, setNewEvent] = useState(initialValues);
 
-const AddEventForm = (props) => {
-
-    const [addEvent, setAddEvent] = useState({})
-
-
-    useEffect(() => {
-        setAddEvent(props.details);
-    }, [props])
- 
-
-    const submitHandler= (e)=>{
-        e.preventDefault()
-        // axiosWithAuth()
-        // .put(`/${props.details.id}`, )
-        // .then(res=>{console.log(res)})
-        // .catch(err=>{console.log(err)})
-     
-       
+    const submitHandler = (e) => {
+        e.preventDefault();
+        axiosWithAuth()
+            .post('/api/event/', newEvent)
+            .then(res => {
+                window.location.pathname = `event/${res.data.event_id}`;
+            })
+            .catch(err => {
+                console.log('err: ', err.response)
+            })
     }
-    const changeHandler= (e)=>{
-        e.preventDefault()
-        setAddEvent({...addEvent, [e.target.name]: e.target.value})
+
+    const changeHandler= (e) => {
+        setNewEvent({...newEvent, [e.target.name]: e.target.value})
     }
 
     
@@ -38,74 +43,74 @@ const AddEventForm = (props) => {
                     <input
                         id="name"
                         type="text"
-                        name="name"
+                        name="event_name"
                         placeholder="name"
-                        // value={addEvent.name}
+                        value={newEvent.event_name}
                         onChange={changeHandler}
                     />
                     <label htmlFor="date" /> Date
                     <input
                         id="date"
                         type="text"
-                        name="date"
+                        name="event_date"
                         placeholder="date"
-                        // value={addEvent.date}
+                        value={newEvent.event_date}
                         onChange={changeHandler}
                     />
                     <label htmlFor='time' />Time
                     <input
                         id="time"
                         type="text"
-                        name="time"
+                        name="event_time"
                         placeholder="time"
-                        // value={addEvent.time}
+                        value={newEvent.event_time}
                         onChange={changeHandler}
                     />
                     <label htmlFor="state" />State
                     <input
                         id="state"
                         type="text"
-                        name="state"
+                        name="event_state"
                         placeholder="state"
-                        // value={addEvent.state}
+                        value={newEvent.event_state}
                         onChange={changeHandler}
                     />
                     <label htmlFor="city" />City
                     <input
                         id="city"
                         type="text"
-                        name="city"
+                        name="event_city"
                         placeholder="city"
-                        // value={addEvent.city}
+                        value={newEvent.event_city}
                         onChange={changeHandler}
                     />
                     <label htmlFor="zip" />Zip
                     <input
                         id="zip"
                         type="text"
-                        name="zip"
+                        name="event_zip"
                         placeholder="zip"
-                        // value={addEvent.zip}
+                        value={newEvent.event_zip}
                         onChange={changeHandler}
                     />
                     <label htmlFor="street" />Street
                     <input
                         id="street"
                         type="text"
-                        name="street"
+                        name="event_street_address"
                         placeholder="street"
-                        // value={addEvent.street}
+                        value={newEvent.event_street_address}
                         onChange={changeHandler}
                     />
-                    <label htmlFor="organizer" />Organizer
+                    {/* <label htmlFor="organizer" />Organizer
                     <input
                         id="organizer"
                         type="number"
                         name="organizer"
                         placeholder="organizer"
-                        // value={addEvent.organizer}
+                        value={newEvent.organizer}
                         onChange={changeHandler}
-                    />
+                    /> */}
                     <button type='submit'>Submit changes</button>
                 </form>
             </div>

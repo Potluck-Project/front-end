@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import '../assets/css/AddEvent.css'
+import axiosWithAuth from '../utils/axiosWithAuth';
+import { useParams } from 'react-router-dom';
 
 
 
-
-const EditEventForm = (props) => {
+const EditEventForm = (e) => {
   
     const [editEventForm, setEditEventForm] = useState({})
+    const { id } = useParams();
 
 
-    useEffect(() => {
-        setEditEventForm(props.details);
-    }, [props])
- 
+
 
     const submitHandler= (e)=>{
         e.preventDefault()
-        // axiosWithAuth()
-        // .put(`/${props.details.id}`, colorToEdit)
-        // .then(res=>{console.log(res)})
-        // .catch(err=>{console.log(err)})
+        console.log( "edit", editEventForm);
+        axiosWithAuth()
+        .put(`api/event/${id}`, editEventForm)
+        .then(res=>{console.log(res)})
+        .catch(err=>{console.log(err)})
      
        
     }
@@ -42,7 +42,7 @@ const EditEventForm = (props) => {
                         type="text"
                         name="name"
                         placeholder="name"
-                        // value={editEventForm.name}
+                        value={editEventForm.name}
                         onChange={changeHandler}
                     />
                     <label htmlFor="date" /> Date
@@ -51,7 +51,7 @@ const EditEventForm = (props) => {
                         type="text"
                         name="date"
                         placeholder="date"
-                        // value={editEventForm.date}
+                        value={editEventForm.date}
                         onChange={changeHandler}
                     />
                     <label htmlFor='time' />Time
@@ -60,7 +60,7 @@ const EditEventForm = (props) => {
                         type="text"
                         name="time"
                         placeholder="time"
-                        // value={editEventForm.time}
+                        value={editEventForm.time}
                         onChange={changeHandler}
                     />
                     <label htmlFor="state" />State
@@ -69,7 +69,7 @@ const EditEventForm = (props) => {
                         type="text"
                         name="state"
                         placeholder="state"
-                        // value={editEventForm.state}
+                        value={editEventForm.state}
                         onChange={changeHandler}
                     />
                     <label htmlFor="city" />City
@@ -78,7 +78,7 @@ const EditEventForm = (props) => {
                         type="text"
                         name="city"
                         placeholder="city"
-                        // value={editEventForm.city}
+                        value={editEventForm.city}
                         onChange={changeHandler}
                     />
                     <label htmlFor="zip" />Zip
@@ -87,7 +87,7 @@ const EditEventForm = (props) => {
                         type="text"
                         name="zip"
                         placeholder="zip"
-                        // value={editEventForm.zip}
+                        value={editEventForm.zip}
                         onChange={changeHandler}
                     />
                     <label htmlFor="street" />Street
@@ -96,18 +96,18 @@ const EditEventForm = (props) => {
                         type="text"
                         name="street"
                         placeholder="street"
-                        // value={editEventForm.street}
+                        value={editEventForm.street}
                         onChange={changeHandler}
                     />
-                    <label htmlFor="organizer" />Organizer
-                    <input
+                    {/* <label htmlFor="organizer" />Organizer */}
+                    {/* <input
                         id="organizer"
                         type="number"
                         name="organizer"
                         placeholder="organizer"
-                        // value={editEventForm.organizer}
+                        value={editEventForm.organizer}
                         onChange={changeHandler}
-                    />
+                    /> */}
                     <button type='submit'>Submit changes</button>
                 </form>
             </div>
